@@ -17,7 +17,7 @@ def post_list(request):
             Q(text__icontains=post)
         ).distinct( )
 
-    paginator = Paginator(posts_list, 5)  # Show 55 posts per page
+    paginator = Paginator(posts_list, 5)  # Show 5 posts per page
 
     page = request.GET.get('page')
     posts = paginator.get_page(page)
